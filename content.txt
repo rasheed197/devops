@@ -1,0 +1,33 @@
+🚀 DevOps Journey — Filters & I/O Redirection in Linux
+
+Today I learned how Linux filters and I/O redirection work — powerful concepts for processing data directly from the terminal.
+
+🔍 Filter Commands
+These commands help process and manipulate text streams:
+
+grep → search for text patterns in files
+less → view output one page at a time
+head → display the beginning of a file
+tail → display the end of a file
+cut → extract specific fields from text
+awk → advanced text filtering & transformation
+Text search & replace using vim and sed
+
+🔄 I/O Redirection
+Control where input, output, and errors go:
+
+> → redirect output (overwrite)
+>> → redirect output (append)
+< → redirect input
+2> → redirect errors (overwrite)
+2>> → redirect errors (append)
+&> → redirect output + error (overwrite)
+&>> → redirect output + error (append)
+| → pipe output of one command to another
+> /dev/null → discard output (redirect to nowhere)
+
+🎯 Takeaway
+Filters and redirection make Linux incredibly powerful for log analysis, automation, and scripting — key skills for DevOps and system administration.
+
+Still learning. Still documenting. 🚀
+#Linux #DevOps #LearningInPublic #ShellScripting #TechJourney
