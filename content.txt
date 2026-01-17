@@ -1,33 +1,74 @@
-🚀 DevOps Journey — Filters & I/O Redirection in Linux
+🚀 DevOps Journey — Package Management in Linux
 
-Today I learned how Linux filters and I/O redirection work — powerful concepts for processing data directly from the terminal.
 
-🔍 Filter Commands
-These commands help process and manipulate text streams:
 
-grep → search for text patterns in files
-less → view output one page at a time
-head → display the beginning of a file
-tail → display the end of a file
-cut → extract specific fields from text
-awk → advanced text filtering & transformation
-Text search & replace using vim and sed
+Yesterday I learned how package management works in Linux and why higher-level package managers are preferred over raw installation commands.
 
-🔄 I/O Redirection
-Control where input, output, and errors go:
 
-> → redirect output (overwrite)
->> → redirect output (append)
-< → redirect input
-2> → redirect errors (overwrite)
-2>> → redirect errors (append)
-&> → redirect output + error (overwrite)
-&>> → redirect output + error (append)
-| → pipe output of one command to another
-> /dev/null → discard output (redirect to nowhere)
+
+📦 Linux distributions mainly fall into two families:
+
+
+
+• RPM-based (RHEL, CentOS, Rocky, Amazon Linux)
+
+• Debian-based (Ubuntu, Debian)
+
+🔍 Viewing Installed Packages
+
+RPM-based:
+
+$ rpm -qa
+
+
+
+Debian-based:
+
+$ dpkg -l
+
+
+
+⚙️ Installing & Uninstalling RPM Packages using RPM command
+
+$ rpm -ivh package_name.rpm  # install
+
+$ rpm -e package_name     # uninstall
+
+
+
+❌ Problem with RPM:
+
+If the package has dependencies (e.g. httpd), installation fails unless you manually install all required dependencies first — which can be very tedious.
+
+
+
+🛠️ Linux Provides Better Package Management Tools
+
+• yum
+
+• dnf
+
+• apt
+
+
+
+✅ Why they’re better:
+
+They automatically resolve and install dependencies along with the main package.
+
+
+📥 Installing Packages with yum / dnf
+
+yum install package_name
+
+dnf install package_name
 
 🎯 Takeaway
-Filters and redirection make Linux incredibly powerful for log analysis, automation, and scripting — key skills for DevOps and system administration.
+
+While rpm is useful, real-world system administration and DevOps rely on yum, dnf, and apt for reliable, dependency-aware package management.
+
+
 
 Still learning. Still documenting. 🚀
-#Linux #DevOps #LearningInPublic #ShellScripting #TechJourney
+
+#Linux #DevOps #PackageManagement #RPM #DNF #YUM #LearningInPublic #TechJourney
